@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Campos — Lugares hechos para durar.</title>
+<meta name="description" content="Diseño, suministro, instalación y mantenimiento de superficies deportivas sintéticas. 25 años, más de un millón de m² instalados en Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="nav" class="nav">
+  <a href="#top" class="nav__brand">
+    <img src="assets/img/logo-light.png" alt="Total Campos" class="nav__logo">
+  </a>
+  <div class="nav__links">
+    <a href="#metodo">Método</a>
+    <a href="#transformacion">Transformación</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto" class="nav__cta">Solicitar asesoría</a>
+  </div>
+</nav>
+
+<header id="top" class="hero" id="hero">
+  <div class="hero__pin">
+    <canvas id="scrub" aria-hidden="true"></canvas>
+    <div class="hero__scrim"></div>
+
+    <div id="loader" class="loader">
+      <div class="loader__label" id="loaderPct">Preparando la cancha · 0%</div>
+      <div class="loader__track"><div class="loader__bar" id="loaderBar"></div></div>
+    </div>
+
+    <div id="heroContent" class="hero__content">
+      <p class="hero__eyebrow">25 años · +1.000.000 m² instalados</p>
+      <h1 class="hero__title">Construimos el lugar<br>donde ocurre el juego.</h1>
+      <p class="hero__sub">Desliza para ver cómo una cancha de tierra se convierte en una superficie de grado profesional.</p>
+    </div>
+
+    <div class="hero__rail">
+      <div class="hero__rail-track"><div id="railFill" class="hero__rail-fill"></div></div>
+    </div>
+
+    <div id="hint" class="hero__hint">
+      <span>Desliza</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v17M1 12l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+
+  <div class="stage" data-from="0.00" data-to="0.25">
+    <span class="stage__num">01 — DIAGNÓSTICO</span>
+    <h2>Antes que vender,<br>entendemos el terreno.</h2>
+  </div>
+  <div class="stage" data-from="0.25" data-to="0.50">
+    <span class="stage__num">02 — BASE Y NIVELACIÓN</span>
+    <h2>Nivelada y compactada<br>al milímetro.</h2>
+  </div>
+  <div class="stage" data-from="0.50" data-to="0.75">
+    <span class="stage__num">03 — INSTALACIÓN</span>
+    <h2>Grama de grado profesional,<br>instalada con precisión.</h2>
+  </div>
+  <div class="stage" data-from="0.75" data-to="1.01">
+    <span class="stage__num">04 — CANCHA LISTA</span>
+    <h2>Lista para durar años,<br>no solo para la inauguración.</h2>
+  </div>
+</header>
+
+<section class="section reveal">
+  <div class="quote">
+    <p class="quote__mark">“</p>
+    <p class="quote__text">El tiempo es el juez más honesto del trabajo bien hecho.</p>
+    <p class="quote__sub">Un campo no se mide por cómo se ve el día que se entrega, sino por cómo está el día que ya nadie recuerda quién lo instaló.</p>
+  </div>
+</section>
+
+<section id="metodo" class="section section--dark">
+  <div class="section__head reveal">
+    <span class="eyebrow">Nuestro método</span>
+    <h2>Cinco principios, un mismo criterio.</h2>
+  </div>
+  <div class="method-grid">
+    <div class="method-card reveal">
+      <span class="method-card__n">01</span>
+      <h3>Antes que vender, entender</h3>
+      <p>Cada proyecto empieza por un diagnóstico honesto del uso real, el presupuesto viable y el resultado esperado.</p>
+    </div>
+    <div class="method-card reveal">
+      <span class="method-card__n">02</span>
+      <h3>Materiales de grado profesional</h3>
+      <p>Grama sintética, caucho, arena de sílice, cerramientos y bases que cumplen el estándar que la palabra calidad debería significar.</p>
+    </div>
+    <div class="method-card reveal">
+      <span class="method-card__n">03</span>
+      <h3>Instalación personalizada</h3>
+      <p>Cada cancha, patio o escenario se diseña e instala según su uso real — no según un catálogo genérico.</p>
+    </div>
+    <div class="method-card reveal">
+      <span class="method-card__n">04</span>
+      <h3>Rigor técnico de punta a punta</h3>
+      <p>Desde la decisión hasta el mantenimiento, con la misma seriedad para quien llega dudando y para quien llega decidido.</p>
+    </div>
+    <div class="method-card reveal">
+      <span class="method-card__n">05</span>
+      <h3>Diseñado para durar</h3>
+      <p>El resultado se juzga años después de la inauguración — cuando ya nadie recuerda quién lo instaló.</p>
+    </div>
+  </div>
+</section>
+
+<section id="transformacion" class="section">
+  <div class="section__head reveal">
+    <span class="eyebrow">Transformación real</span>
+    <h2>Antes / Después</h2>
+    <p class="section__sub">Arrastra para comparar el mismo escenario.</p>
+  </div>
+  <div id="ba" class="ba reveal" style="--split:50%">
+    <img src="assets/img/before.webp" alt="Cancha antes de la instalación" class="ba__img ba__img--before">
+    <div class="ba__after-wrap">
+      <img src="assets/img/after.webp" alt="Cancha después de la instalación" class="ba__img ba__img--after">
+    </div>
+    <div class="ba__handle">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 5L2 10l5 5M13 5l5 5-5 5" stroke="#050A34" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <span class="ba__tag ba__tag--before">Antes</span>
+    <span class="ba__tag ba__tag--after">Después</span>
+  </div>
+</section>
+
+<section id="servicios" class="section section--dark">
+  <div class="section__head reveal">
+    <span class="eyebrow">Qué ofrecemos</span>
+    <h2>Servicios integrales, no solo material.</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <h3>Asesoría técnica</h3>
+      <p>Diagnóstico de uso, presupuesto y resultado esperado antes de recomendar cualquier material.</p>
+    </div>
+    <div class="service-card reveal">
+      <h3>Diseño de cancha</h3>
+      <p>Escenarios deportivos, recreativos y decorativos diseñados para su uso real.</p>
+    </div>
+    <div class="service-card reveal">
+      <h3>Instalación</h3>
+      <p>Grama sintética, caucho, arena de sílice, cerramientos y bases — grado profesional.</p>
+    </div>
+    <div class="service-card reveal">
+      <h3>Mantenimiento</h3>
+      <p>Porque el resultado se mide en cómo luce el campo años después, no el día de la entrega.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="section section--cta">
+  <div class="cta reveal">
+    <h2>Lugares hechos<br>para durar.</h2>
+    <p>Cuéntanos qué escenario tienes en mente y empecemos por entenderlo.</p>
+    <a href="mailto:contacto@totalcampos.com" class="btn btn--light">Solicitar asesoría</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <img src="assets/img/iso-light.png" alt="" class="footer__iso">
+  <p>© 2026 Total Campos — totalcampos.com — @totalcampos.col</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
