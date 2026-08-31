@@ -198,8 +198,8 @@ img { max-width: 100%; display: block; }
 
 /* -------- certifications -------- */
 .certs-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px; max-width: 760px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px; max-width: 1100px; margin: 0 auto;
 }
 .cert-card {
   background: var(--blue-50); border: 1px solid rgba(5,10,52,0.1);
@@ -209,6 +209,10 @@ img { max-width: 100%; display: block; }
   display: block; height: 84px; width: auto; margin: 0 auto 22px; object-fit: contain;
 }
 .cert-card__badge--wide { height: 64px; }
+.cert-card__star {
+  display: block; font-size: 1.6rem; color: var(--blue-500); margin-bottom: 22px; line-height: 1;
+}
+.cert-card--star { padding-top: 32px; }
 .cert-card h3 { font-style: italic; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px; }
 .cert-card p { opacity: 0.72; font-size: 0.92rem; line-height: 1.55; }
 .certs-note {
