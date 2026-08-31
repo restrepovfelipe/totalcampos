@@ -206,11 +206,9 @@ img { max-width: 100%; display: block; }
   border-radius: 8px; padding: 36px 30px; text-align: center;
 }
 .cert-card__badge {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 72px; height: 72px; margin: 0 auto 20px; border-radius: 50%;
-  border: 2px solid var(--blue-500); color: var(--blue-500);
-  font-style: italic; font-weight: 800; font-size: 0.95rem; letter-spacing: 0.02em;
+  display: block; height: 84px; width: auto; margin: 0 auto 22px; object-fit: contain;
 }
+.cert-card__badge--wide { height: 64px; }
 .cert-card h3 { font-style: italic; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px; }
 .cert-card p { opacity: 0.72; font-size: 0.92rem; line-height: 1.55; }
 .certs-note {
