@@ -6,6 +6,7 @@
   --blue-50:  #F0F9FC;
   --ink: var(--navy-950);
   --font: "Anybody", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,7 +14,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font);
+  font-family: var(--font-body);
+  font-weight: 300;
   background: var(--blue-50);
   color: var(--ink);
   overflow-x: hidden;
@@ -55,7 +57,7 @@ img { max-width: 100%; display: block; }
 .nav__links a:hover { opacity: 1; }
 .nav__cta {
   background: var(--blue-500); padding: 10px 20px; border-radius: 999px;
-  font-style: italic; font-weight: 600; opacity: 1 !important;
+  font-style: italic; font-family: var(--font); font-weight: 600; opacity: 1 !important;
   white-space: nowrap;
 }
 .nav__cta-short { display: none; }
@@ -96,12 +98,12 @@ img { max-width: 100%; display: block; }
   transition: opacity .15s linear;
 }
 .hero__eyebrow {
-  font-style: italic; font-weight: 600; color: var(--blue-200);
+  font-style: italic; font-family: var(--font); font-weight: 600; color: var(--blue-200);
   letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.85rem;
   margin-bottom: 14px;
 }
 .hero__title {
-  font-style: italic; font-weight: 800; font-size: clamp(2.2rem, 6vw, 5rem);
+  font-style: italic; font-family: var(--font); font-weight: 800; font-size: clamp(2.2rem, 6vw, 5rem);
   line-height: 1.02; letter-spacing: -0.01em; max-width: 16ch;
 }
 .hero__sub {
@@ -118,7 +120,7 @@ img { max-width: 100%; display: block; }
 .hero__hint {
   position: absolute; right: 6vw; bottom: 128px; z-index: 3;
   display: flex; flex-direction: column; align-items: center; gap: 6px;
-  color: var(--blue-200); font-size: 0.78rem; font-style: italic;
+  color: var(--blue-200); font-size: 0.78rem; font-style: italic; font-family: var(--font);
   transition: opacity .4s ease; animation: bob 1.6s ease-in-out infinite;
 }
 .hero__hint.is-hidden { opacity: 0; }
@@ -129,7 +131,7 @@ img { max-width: 100%; display: block; }
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 14px; transition: opacity .5s ease;
 }
-.loader__label { color: var(--blue-200); font-style: italic; font-size: 0.9rem; }
+.loader__label { color: var(--blue-200); font-style: italic; font-family: var(--font); font-size: 0.9rem; }
 .loader__track { width: 220px; height: 3px; background: rgba(175,233,253,0.2); }
 .loader__bar { width: 0%; height: 100%; background: var(--blue-500); transition: width .15s linear; }
 .loader.is-done { opacity: 0; pointer-events: none; }
@@ -143,11 +145,11 @@ img { max-width: 100%; display: block; }
 }
 .stage.is-active { opacity: 1; }
 .stage__num {
-  font-style: italic; font-weight: 600; color: var(--blue-200);
+  font-style: italic; font-family: var(--font); font-weight: 600; color: var(--blue-200);
   letter-spacing: 0.08em; font-size: 0.85rem; margin-bottom: 10px;
 }
 .stage h2 {
-  font-style: italic; font-weight: 800; font-size: clamp(1.6rem, 4.2vw, 3.2rem);
+  font-style: italic; font-family: var(--font); font-weight: 800; font-size: clamp(1.6rem, 4.2vw, 3.2rem);
   line-height: 1.08; max-width: 18ch;
 }
 
@@ -161,22 +163,22 @@ img { max-width: 100%; display: block; }
 
 .section__head { max-width: 640px; margin: 0 auto 64px; text-align: center; }
 .eyebrow {
-  display: inline-block; font-style: italic; font-weight: 600;
+  display: inline-block; font-style: italic; font-family: var(--font); font-weight: 600;
   color: var(--blue-500); letter-spacing: 0.08em; text-transform: uppercase;
   font-size: 0.82rem; margin-bottom: 14px;
 }
 .section--dark .eyebrow { color: var(--blue-200); }
 .section__head h2 {
-  font-style: italic; font-weight: 800; font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-style: italic; font-family: var(--font); font-weight: 800; font-size: clamp(1.7rem, 4vw, 2.6rem);
   line-height: 1.1;
 }
 .section__sub { margin-top: 14px; opacity: 0.75; }
 
 /* -------- quote -------- */
 .quote { max-width: 760px; margin: 0 auto; text-align: center; }
-.quote__mark { font-size: 4rem; font-style: italic; color: var(--blue-500); line-height: 1; }
+.quote__mark { font-size: 4rem; font-style: italic; font-family: var(--font); color: var(--blue-500); line-height: 1; }
 .quote__text {
-  font-style: italic; font-weight: 800; font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+  font-style: italic; font-family: var(--font); font-weight: 800; font-size: clamp(1.5rem, 3.4vw, 2.4rem);
   line-height: 1.25; margin-top: 4px;
 }
 .quote__sub { margin-top: 20px; opacity: 0.7; font-size: 1rem; max-width: 56ch; margin-inline: auto; }
@@ -191,9 +193,9 @@ img { max-width: 100%; display: block; }
   padding: 32px 26px;
 }
 .method-card__n {
-  font-style: italic; font-weight: 800; font-size: 1.8rem; color: var(--blue-500);
+  font-style: italic; font-family: var(--font); font-weight: 800; font-size: 1.8rem; color: var(--blue-500);
 }
-.method-card h3 { font-style: italic; font-weight: 600; margin: 14px 0 10px; font-size: 1.1rem; }
+.method-card h3 { font-style: italic; font-family: var(--font); font-weight: 600; margin: 14px 0 10px; font-size: 1.1rem; }
 .method-card p { opacity: 0.72; font-size: 0.92rem; line-height: 1.5; }
 
 /* -------- certifications -------- */
@@ -213,11 +215,11 @@ img { max-width: 100%; display: block; }
   display: block; font-size: 1.6rem; color: var(--blue-500); margin-bottom: 22px; line-height: 1;
 }
 .cert-card--star { padding-top: 32px; }
-.cert-card h3 { font-style: italic; font-weight: 700; font-size: 1.15rem; margin-bottom: 10px; }
+.cert-card h3 { font-style: italic; font-family: var(--font); font-weight: 700; font-size: 1.15rem; margin-bottom: 10px; }
 .cert-card p { opacity: 0.72; font-size: 0.92rem; line-height: 1.55; }
 .certs-note {
   max-width: 640px; margin: 32px auto 0; text-align: center;
-  font-size: 0.82rem; opacity: 0.55; font-style: italic;
+  font-size: 0.82rem; opacity: 0.55; font-style: italic; font-family: var(--font);
 }
 
 /* -------- allied manufacturers -------- */
@@ -231,7 +233,7 @@ img { max-width: 100%; display: block; }
 .maker-card__logo-wrap { height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
 .maker-card__logo { height: 32px; width: auto; object-fit: contain; }
 .maker-card__country {
-  display: inline-block; font-style: italic; font-weight: 600; color: var(--blue-200);
+  display: inline-block; font-style: italic; font-family: var(--font); font-weight: 600; color: var(--blue-200);
   letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.75rem; margin-bottom: 14px;
 }
 .maker-card p { color: var(--blue-50); opacity: 0.75; font-size: 0.88rem; line-height: 1.6; }
@@ -260,7 +262,7 @@ img { max-width: 100%; display: block; }
   width: 2px; background: var(--blue-50); transform: translateX(-1px);
 }
 .ba__tag {
-  position: absolute; top: 16px; font-style: italic; font-weight: 600;
+  position: absolute; top: 16px; font-style: italic; font-family: var(--font); font-weight: 600;
   font-size: 0.8rem; padding: 6px 14px; border-radius: 999px; color: var(--blue-50);
   background: rgba(5,10,52,0.55); backdrop-filter: blur(4px);
 }
@@ -277,9 +279,9 @@ img { max-width: 100%; display: block; }
   padding: 32px 26px;
 }
 .product-card__n {
-  font-style: italic; font-weight: 800; font-size: 1.8rem; color: var(--blue-500);
+  font-style: italic; font-family: var(--font); font-weight: 800; font-size: 1.8rem; color: var(--blue-500);
 }
-.product-card h3 { font-style: italic; font-weight: 600; margin: 14px 0 8px; font-size: 1.1rem; }
+.product-card h3 { font-style: italic; font-family: var(--font); font-weight: 600; margin: 14px 0 8px; font-size: 1.1rem; }
 .product-card__tags { font-size: 0.82rem; opacity: 0.6; margin-bottom: 8px; }
 .product-card p:last-child { opacity: 0.72; font-size: 0.92rem; line-height: 1.5; }
 
@@ -290,7 +292,7 @@ img { max-width: 100%; display: block; }
 .ref-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; white-space: nowrap; }
 .ref-table th, .ref-table td { padding: 14px 20px; text-align: left; }
 .ref-table thead th {
-  font-style: italic; font-weight: 600; color: var(--blue-500);
+  font-style: italic; font-family: var(--font); font-weight: 600; color: var(--blue-500);
   letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.75rem;
   border-bottom: 1px solid rgba(5,10,52,0.12);
 }
@@ -308,7 +310,7 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(160deg, rgba(8,92,240,0.14), rgba(175,233,253,0.04));
   border: 1px solid rgba(175,233,253,0.14); border-radius: 8px; padding: 34px 28px;
 }
-.service-card h3 { font-style: italic; font-weight: 700; font-size: 1.2rem; margin-bottom: 10px; }
+.service-card h3 { font-style: italic; font-family: var(--font); font-weight: 700; font-size: 1.2rem; margin-bottom: 10px; }
 .service-card p { opacity: 0.72; font-size: 0.94rem; line-height: 1.55; }
 
 /* -------- featured projects -------- */
@@ -318,7 +320,7 @@ img { max-width: 100%; display: block; }
 }
 .proj-stat { text-align: center; }
 .proj-stat__n {
-  display: block; font-style: italic; font-weight: 800; color: var(--blue-500);
+  display: block; font-style: italic; font-family: var(--font); font-weight: 800; color: var(--blue-500);
   font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1;
 }
 .proj-stat__label {
@@ -332,7 +334,7 @@ img { max-width: 100%; display: block; }
 .proj-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; white-space: nowrap; }
 .proj-table th, .proj-table td { padding: 14px 20px; text-align: left; }
 .proj-table thead th {
-  font-style: italic; font-weight: 600; color: var(--blue-200);
+  font-style: italic; font-family: var(--font); font-weight: 600; color: var(--blue-200);
   letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.75rem;
   border-bottom: 1px solid rgba(175,233,253,0.14);
 }
@@ -348,12 +350,12 @@ img { max-width: 100%; display: block; }
 /* -------- cta -------- */
 .cta { text-align: center; max-width: 640px; margin: 0 auto; }
 .cta h2 {
-  font-style: italic; font-weight: 800; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05;
+  font-style: italic; font-family: var(--font); font-weight: 800; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05;
 }
 .cta p { margin-top: 18px; opacity: 0.88; font-size: 1.05rem; }
 .btn {
   display: inline-block; margin-top: 30px; padding: 15px 34px; border-radius: 999px;
-  text-decoration: none; font-style: italic; font-weight: 700; font-size: 0.98rem;
+  text-decoration: none; font-style: italic; font-family: var(--font); font-weight: 700; font-size: 0.98rem;
   transition: transform .2s ease;
 }
 .btn:hover { transform: translateY(-2px); }
