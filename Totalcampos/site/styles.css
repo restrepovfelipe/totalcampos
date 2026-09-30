@@ -227,6 +227,7 @@ img { max-width: 100%; display: block; }
   display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px; max-width: 900px; margin: 56px auto 0;
 }
+.maker-solo { max-width: 360px; margin: 0 auto 48px; }
 .maker-card {
   background: var(--navy-950); border-radius: 8px; padding: 32px 30px; text-align: center;
 }
@@ -327,6 +328,16 @@ img { max-width: 100%; display: block; }
   display: block; margin-top: 8px; font-size: 0.8rem; color: var(--blue-200);
   letter-spacing: 0.04em; text-transform: uppercase;
 }
+.colmap { max-width: 320px; margin: 0 auto 56px; }
+.colmap__svg { width: 100%; height: auto; overflow: visible; }
+.colmap__country { fill: rgba(175,233,253,0.1); stroke: var(--blue-500); stroke-width: 1.5; stroke-linejoin: round; }
+.colmap__dot { fill: var(--blue-500); stroke: var(--navy-950); stroke-width: 0.6; }
+.colmap__dot--hub { fill: var(--blue-200); }
+.colmap__label {
+  font-size: 8.5px; fill: var(--blue-50); opacity: 0.85;
+}
+.colmap__label--hub { font-weight: 700; font-size: 10px; fill: var(--blue-200); }
+
 .proj-table-wrap {
   max-width: 1100px; margin: 0 auto; overflow-x: auto;
   border: 1px solid rgba(175,233,253,0.14); border-radius: 8px;
@@ -361,12 +372,50 @@ img { max-width: 100%; display: block; }
 .btn:hover { transform: translateY(-2px); }
 .btn--light { background: var(--navy-950); color: var(--blue-50); }
 
+.cta__perks {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  list-style: none; margin-top: 24px;
+}
+.cta__perks li {
+  background: rgba(5,10,52,0.18); padding: 8px 18px; border-radius: 999px;
+  font-size: 0.85rem; font-weight: 500;
+}
+
 .cta__details {
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-  gap: 10px; margin-top: 24px; font-size: 0.9rem; opacity: 0.85;
+  gap: 10px; margin-top: 40px; font-size: 0.9rem; opacity: 0.85;
 }
 .cta__details a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .cta__details span[aria-hidden] { opacity: 0.5; }
+
+/* -------- custom project form -------- */
+.project-form-wrap {
+  max-width: 520px; margin: 56px auto 0; background: var(--navy-950);
+  border-radius: 12px; padding: 40px 34px; text-align: center; color: var(--blue-50);
+}
+.project-form-wrap h3 {
+  font-style: italic; font-family: var(--font); font-weight: 800; font-size: 1.4rem;
+}
+.project-form-wrap > p { margin-top: 10px; opacity: 0.7; font-size: 0.92rem; }
+.project-form { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.project-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.project-form input, .project-form select, .project-form textarea {
+  width: 100%; background: rgba(240,249,252,0.06); border: 1px solid rgba(175,233,253,0.2);
+  border-radius: 8px; padding: 12px 14px; color: var(--blue-50); font-family: var(--font-body);
+  font-size: 0.92rem; resize: vertical;
+}
+.project-form input::placeholder, .project-form textarea::placeholder { color: rgba(240,249,252,0.45); }
+.project-form input:focus, .project-form select:focus, .project-form textarea:focus {
+  outline: none; border-color: var(--blue-500);
+}
+.project-form select { appearance: none; color: rgba(240,249,252,0.85); }
+.project-form select:invalid { color: rgba(240,249,252,0.45); }
+.project-form .btn { margin-top: 6px; align-self: center; border: none; cursor: pointer; }
+
+@media (max-width: 480px) {
+  .project-form-wrap { padding: 32px 22px; }
+  .project-form__row { grid-template-columns: 1fr; }
+}
 
 /* -------- whatsapp floating button -------- */
 .whatsapp-fab {

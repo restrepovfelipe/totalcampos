@@ -164,8 +164,29 @@
     stage.addEventListener('pointercancel', () => { dragging = false; });
   }
 
+  function initProjectForm() {
+    const form = document.getElementById('projectForm');
+    if (!form) return;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const d = new FormData(form);
+      const lines = [
+        'Hola, quiero crear un proyecto a medida.',
+        `Nombre: ${d.get('nombre')}`,
+        `Teléfono: ${d.get('telefono')}`,
+        `Ciudad: ${d.get('ciudad')}`,
+        `Tipo de proyecto: ${d.get('tipo')}`,
+      ];
+      const mensaje = (d.get('mensaje') || '').trim();
+      if (mensaje) lines.push(`Mensaje: ${mensaje}`);
+      const url = 'https://wa.me/573117700389?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener');
+    });
+  }
+
   initReveal();
   initBA();
+  initProjectForm();
   loadAll();
   requestAnimationFrame(tick);
 })();
