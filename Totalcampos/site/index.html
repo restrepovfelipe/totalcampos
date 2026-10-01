@@ -36,19 +36,50 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
 <nav id="nav" class="nav">
   <a href="#top" class="nav__brand">
-    <img src="assets/img/logo-light.png" alt="Total Campos" class="nav__logo">
+    <img src="/assets/img/logo-light.png" alt="Total Campos" class="nav__logo">
   </a>
+  <button id="navToggle" class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav__links">
     <a href="#quienes-somos">Quiénes somos</a>
     <a href="#metodo">Qué hacemos</a>
-    <a href="#productos">Productos</a>
-    <a href="#servicios">Servicios</a>
+    <div class="nav__drop">
+      <a href="/deportivo/" class="nav__drop-trigger">Deportivo</a>
+      <div class="nav__drop-panel">
+        <a href="/deportivo/futbol.html">Fútbol</a>
+        <a href="/deportivo/padel.html">Pádel</a>
+        <a href="/deportivo/golf.html">Golf</a>
+        <a href="/deportivo/gimnasios.html">Gimnasios</a>
+        <a href="/deportivo/multideporte.html">Multideporte</a>
+        <a href="/deportivo/fifa.html">FIFA®</a>
+        <a href="/deportivo/" class="nav__drop-all">Ver todos</a>
+      </div>
+    </div>
+    <div class="nav__drop">
+      <a href="/jardineria/" class="nav__drop-trigger">Jardinería</a>
+      <div class="nav__drop-panel nav__drop-panel--wide">
+        <a href="/jardineria/piscinas.html">Piscinas</a>
+        <a href="/jardineria/mascotas.html">Mascotas</a>
+        <a href="/jardineria/jardin.html">Jardín</a>
+        <a href="/jardineria/terrazas.html">Terraza y Ático</a>
+        <a href="/jardineria/ninos.html">Niños</a>
+        <a href="/jardineria/parques-infantiles.html" class="nav__drop-sub">Parques infantiles</a>
+        <a href="/jardineria/guarderias.html" class="nav__drop-sub">Guarderías</a>
+        <a href="/jardineria/patios.html">Patio</a>
+        <a href="/jardineria/balcon.html">Balcón</a>
+        <a href="/jardineria/zonas-publicas.html">Zonas públicas</a>
+        <a href="/jardineria/jardin-premium.html">Jardín Premium</a>
+        <a href="/jardineria/accesorios.html">Accesorios</a>
+        <a href="/jardineria/" class="nav__drop-all">Ver todos</a>
+      </div>
+    </div>
     <a href="#proyectos">Proyectos</a>
     <a href="#contacto" class="nav__cta">
       <span class="nav__cta-full">Solicitar asesoría</span>
@@ -156,7 +187,7 @@
 
   <div class="maker-solo reveal">
     <div class="maker-card">
-      <div class="maker-card__logo-wrap"><img src="assets/img/manufacturers/realturf-logo.png" alt="Realturf" class="maker-card__logo"></div>
+      <div class="maker-card__logo-wrap"><img src="/assets/img/manufacturers/realturf-logo.png" alt="Realturf" class="maker-card__logo"></div>
       <span class="maker-card__country">España</span>
       <p>20+ años de experiencia, con producción propia y más de 3,5 millones de m² comercializados.</p>
     </div>
@@ -194,9 +225,9 @@
     <p class="section__sub">Arrastra para comparar el mismo escenario.</p>
   </div>
   <div id="ba" class="ba reveal" style="--split:50%">
-    <img src="assets/img/before.webp" alt="Cancha antes de la instalación" class="ba__img ba__img--before">
+    <img src="/assets/img/before.webp" alt="Cancha antes de la instalación" class="ba__img ba__img--before">
     <div class="ba__after-wrap">
-      <img src="assets/img/after.webp" alt="Cancha después de la instalación" class="ba__img ba__img--after">
+      <img src="/assets/img/after.webp" alt="Cancha después de la instalación" class="ba__img ba__img--after">
     </div>
     <div class="ba__handle">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 5L2 10l5 5M13 5l5 5-5 5" stroke="#050A34" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -383,10 +414,10 @@
 </a>
 
 <footer class="footer">
-  <img src="assets/img/iso-light.png" alt="" class="footer__iso">
+  <img src="/assets/img/iso-light.png" alt="" class="footer__iso">
   <p>© 2026 Total Campos — www.totalcampos.com.co — @totalcampos.col</p>
 </footer>
 
-<script src="app.js"></script>
+<script src="/app.js"></script>
 </body>
 </html>

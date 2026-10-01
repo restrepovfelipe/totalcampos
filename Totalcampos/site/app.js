@@ -7,17 +7,20 @@
 
   const N = 90;                          // frame count (f_001 … f_090)
   const pad3 = n => String(n).padStart(3, '0');
-  const frameURL = i => `assets/frames_desktop/f_${pad3(i + 1)}.webp`;
+  const frameURL = i => `/assets/frames_desktop/f_${pad3(i + 1)}.webp`;
   const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
 
   const canvas   = document.getElementById('scrub');
-  const ctx      = canvas.getContext('2d', { alpha: false });
   const hero     = document.getElementById('top');
-  const pin      = hero.querySelector('.hero__pin');
+  const pin      = hero ? hero.querySelector('.hero__pin') : null;
+  const nav      = document.getElementById('nav');
+
+  // Pages without the scroll-scrub hero (category pages) skip this whole block.
+  if (canvas && hero && pin) {
+  const ctx      = canvas.getContext('2d', { alpha: false });
   const railFill = document.getElementById('railFill');
   const heroContent = document.getElementById('heroContent');
   const hint     = document.getElementById('hint');
-  const nav      = document.getElementById('nav');
   const loader   = document.getElementById('loader');
   const loaderBar= document.getElementById('loaderBar');
   const loaderPct= document.getElementById('loaderPct');
@@ -138,6 +141,10 @@
     markDirty();
   }
 
+  loadAll();
+  requestAnimationFrame(tick);
+  } // end hero-only block
+
   function initReveal() {
     const els = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
@@ -184,9 +191,34 @@
     });
   }
 
+  function initMegaMenu() {
+    const navToggle = document.getElementById('navToggle');
+    if (navToggle && nav) {
+      navToggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('is-menu-open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    const items = document.querySelectorAll('.nav__drop');
+    items.forEach((item) => {
+      const trigger = item.querySelector('.nav__drop-trigger');
+      if (!trigger) return;
+      trigger.addEventListener('click', (e) => {
+        if (window.innerWidth > 820) return; // desktop uses :hover
+        e.preventDefault();
+        const isOpen = item.classList.contains('is-open');
+        items.forEach((i) => i.classList.remove('is-open'));
+        if (!isOpen) item.classList.add('is-open');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav__drop')) items.forEach((i) => i.classList.remove('is-open'));
+    });
+  }
+
   initReveal();
   initBA();
   initProjectForm();
-  loadAll();
-  requestAnimationFrame(tick);
+  initMegaMenu();
 })();
