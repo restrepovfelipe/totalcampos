@@ -205,7 +205,7 @@
       const trigger = item.querySelector('.nav__drop-trigger');
       if (!trigger) return;
       trigger.addEventListener('click', (e) => {
-        if (window.innerWidth > 820) return; // desktop uses :hover
+        if (window.innerWidth > 1100) return; // desktop uses :hover
         e.preventDefault();
         const isOpen = item.classList.contains('is-open');
         items.forEach((i) => i.classList.remove('is-open'));
