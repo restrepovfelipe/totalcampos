@@ -7,7 +7,7 @@
 
   const N = 90;                          // frame count (f_001 … f_090)
   const pad3 = n => String(n).padStart(3, '0');
-  const frameURL = i => `/assets/frames_desktop/f_${pad3(i + 1)}.webp`;
+  const frameURL = i => `/assets/frames_desktop/f_${pad3(i + 1)}.webp?v=2`;
   const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
 
   const canvas   = document.getElementById('scrub');
